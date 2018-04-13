@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+<div class="column is-half is-offset-one-quarter">
+  <h1><%= @user.email %></h1>
+  <p class="text-center">
+    <%= @user.email %>
+  </p>
+
+  <h1>Events</h1>
+  <table>
+    <tbody>
+      <th>Description</th>
+      <th>Time</th>
+      <th>Date</th>
+      <th>Location</th>
+    <% @event.each do |event| %>
+      <tr>
+        <td><%= event.description %></td>
+        <td><%= event.time %></td>
+        <td><%= event.date %></td>
+        <td><%= event.location %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+
+</div>
